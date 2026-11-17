@@ -6,8 +6,8 @@ A public collection of unrelated code snippets and experiments, free to use.
 
 Browse the repository and choose a snippet. Check the source file's comments and dependencies before building; each example may be independent and may have its own requirements. Copy or clone the files you need, then compile and run the relevant program from a terminal.
 
-## Programs
-1. ### concat.c
+
+## concat.c
 
 **Description**
 
@@ -21,7 +21,7 @@ Merges contents of files and outputs it to new file
 
 `gcc -Wall -Wextra -std=c11 concat.c -o concat`
 
-### pdf2img.cpp
+## pdf2img.cpp
 
 **Description**
 
