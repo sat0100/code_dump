@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 // Define maximum memory in bytes to use as buffer
-#define MAX_PAGE_SIZE 100000
+#define MAX_PAGE_SIZE 100*1024
 
 int main(int argc, char*argv[]){
 
