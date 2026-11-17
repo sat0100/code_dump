@@ -6,17 +6,21 @@ A public collection of unrelated code snippets and experiments, free to use.
 
 Browse the repository and choose a snippet. Check the source file's comments and dependencies before building; each example may be independent and may have its own requirements. Copy or clone the files you need, then compile and run the relevant program from a terminal.
 
-
 ## concat.c
 
 **Description**
 
-Merges contents of files and outputs it to new file
+Merges contents of files and outputs it to new file.
+It reads data up to that defined by MAX_PAGE_SIZE macro in memory before writing to new file making this faster.
 
 **Usage**
 
 *Usage:* `concat [file1] [file2] ..... [outputfile]`
 
+*Example:* `concat file1.txt file2.txt file3.txt outfile.txt`
+
+  This merges file1.txt file2.txt file3.txt and outputs to outfile.txt
+  
 **Compile**
 
 `gcc -Wall -Wextra -std=c11 concat.c -o concat`
@@ -36,7 +40,6 @@ Converts images passed to pdf
 > **Dependency**: `libhpdf`
 
 `g++ -std=c++17 -Wall -Wextra pdf2img.cpp -o pdf2img -lhpdf`
-
 
 ## Requirements
 
