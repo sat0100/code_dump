@@ -6,45 +6,37 @@ A public collection of unrelated code snippets and experiments, free to use.
 
 Browse the repository and choose a snippet. Check the source file's comments and dependencies before building; each example may be independent and may have its own requirements. Copy or clone the files you need, then compile and run the relevant program from a terminal.
 
-## Compile with GCC (C)
+## Programs
+1. ### concat.c
 
-For a C source file such as `program.c`, compile it with GCC:
+**Description**
 
-```sh
-gcc -Wall -Wextra -std=c11 program.c -o program
-```
+Merges contents of files and outputs it to new file
 
-Run the resulting executable:
+**Usage**
 
-```sh
-./program
-```
+*Usage:* `concat [file1] [file2] ..... [outputfile]`
 
-On Windows, run `program.exe` instead. If the code uses math functions from `libm`, add `-lm` at the end of the command:
+**Compile**
 
-```sh
-gcc -Wall -Wextra -std=c11 program.c -o program -lm
-```
+`gcc -Wall -Wextra -std=c11 concat.c -o concat`
 
-## Compile with G++ (C++)
+### pdf2img.cpp
 
-For a C++ source file such as `program.cpp`, use G++:
+**Description**
 
-```sh
-g++ -Wall -Wextra -std=c++17 program.cpp -o program
-```
+Converts images passed to pdf
 
-Then run it:
+**Usage**
 
-```sh
-./program
-```
+*Usage:* `pdf2img [img1] [img2] ..... [outputpdf]`
 
-Use a standard supported by the code (for example, `-std=c++20` for C++20). For a program split across multiple source files, list them all in the compile command:
+**Compile**
 
-```sh
-g++ -Wall -Wextra -std=c++17 main.cpp helper.cpp -o program
-```
+> **Dependency**: `libhpdf`
+
+`g++ -std=c++17 -Wall -Wextra pdf2img.cpp -o pdf2img -lhpdf`
+
 
 ## Requirements
 
