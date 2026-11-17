@@ -1,9 +1,8 @@
 #include <iostream>
-#include <qpdf/QPDF.hh>
-#include <qpdf/QPDFWriter.hh>
 #include <hpdf.h>
 #include <hpdf_types.h>
 #include <filesystem>
+#include <cstdio>
 
 void error_handler(HPDF_STATUS error_no, HPDF_STATUS detail_no, void *user_data){
 	printf("ERROR: error_no= %04X, detail_no=%d\n",
@@ -12,12 +11,13 @@ void error_handler(HPDF_STATUS error_no, HPDF_STATUS detail_no, void *user_data)
 }
 
 void show_help(){
-	std::cout<<"Usage: pdf2img [img1] [img2] .... [output_filename]"
+	std::cout<<"Usage: pdf2img [img1] [img2] .... [output_filename]";
 }
 int main(int argc, char** argv){
 	if(argc==1){
 		printf("ERROR: insufficient arguments\n");
-		show_help()
+		show_help();
+		return 0;
 	}
 	
 	std::filesystem::path filepath;
